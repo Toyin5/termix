@@ -127,8 +127,8 @@ public class InputHandler(FileManager fileManager)
         {
             (int v, int h) offset = key switch
             {
-                ConsoleKey.UpArrow or ConsoleKey.K => (-1, 0),
-                ConsoleKey.DownArrow or ConsoleKey.J => (1, 0),
+                ConsoleKey.UpArrow or ConsoleKey.J => (-1, 0),
+                ConsoleKey.DownArrow or ConsoleKey.K => (1, 0),
                 ConsoleKey.LeftArrow or ConsoleKey.H => (0, -5),
                 ConsoleKey.RightArrow or ConsoleKey.L => (0, 5),
                 _ => (0, 0)
@@ -140,8 +140,8 @@ public class InputHandler(FileManager fileManager)
 
         var direction = key switch
         {
-            ConsoleKey.DownArrow or ConsoleKey.J => 1,
-            ConsoleKey.UpArrow or ConsoleKey.K => -1,
+            ConsoleKey.DownArrow or ConsoleKey.K => 1,
+            ConsoleKey.UpArrow or ConsoleKey.J => -1,
             _ => 0
         };
         if (direction != 0)
